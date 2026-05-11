@@ -73,3 +73,17 @@ public:
                  << " | Status: " << (m.getStatus() ? "Aktif" : "Mati") << endl;
         }
     }
+
+     
+    void toggleActivationMember(vector<Member>& daftarMember, int targetId) {
+        for (auto& m : daftarMember) {
+            if (m.getId() == targetId) {
+                m.setStatus(!m.getStatus());
+                cout << "\n[Admin] Status Member ID " << targetId << " berhasil diubah." << endl;
+                return;
+            }
+        }
+        cout << "\n[Admin] Member dengan ID " << targetId << " tidak ditemukan." << endl;
+    }
+};
+
