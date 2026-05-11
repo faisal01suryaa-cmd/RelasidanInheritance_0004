@@ -59,3 +59,17 @@ public:
         cout << "---------------------" << endl;
     }
 };
+
+// Derived Class: Admin
+class Admin : public User {
+public:
+    Admin(string pNama, string pEmail) : User(pNama, pEmail) {}
+
+    // Menampilkan semua member yang terdaftar
+    void showAllMember(vector<Member>& daftarMember) {
+        cout << "\n[Admin Panel] Daftar Semua Member:" << endl;
+        for (auto& m : daftarMember) {
+            cout << "ID: " << m.getId() << " | Nama: " << m.getNama() 
+                 << " | Status: " << (m.getStatus() ? "Aktif" : "Mati") << endl;
+        }
+    }
