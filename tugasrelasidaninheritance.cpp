@@ -29,3 +29,5 @@ public:
 
 // Inisialisasi static member
 int User::globalId = 0;
+// Forward declaration untuk class Member agar Admin bisa mengenalnya
+class Member;
